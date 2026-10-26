@@ -1,0 +1,58 @@
+.button{
+
+    border: none;
+    outline: none;
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+
+    &.primary-button{
+        background-color: #e1034d;
+        color: white;
+    }
+
+    &:active{
+        transform: scale(0.9);
+    }
+}
+
+.logout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #2a3348;
+    border-radius: 0.5rem;
+    background: #161b22;
+    color: #e6edf3;
+    font: inherit;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+
+    &:hover:not(:disabled) {
+        border-color: #ff2d78;
+        color: #ff6b9d;
+        background: #1c2230;
+    }
+
+    &:disabled {
+        cursor: wait;
+        opacity: 0.65;
+    }
+}
+
+.logout-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+}
+
+.logout-error {
+    color: #ff8b8b;
+    font-size: 0.75rem;
+}

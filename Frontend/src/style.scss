@@ -1,0 +1,112 @@
+@use "./style/button.scss";
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    background-color: #161616;
+    color: whitesmoke;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.app-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4.25rem;
+    padding: 0.65rem clamp(1rem, 4vw, 3rem);
+    border-bottom: 1px solid #2a3348;
+    background: rgba(13, 17, 23, 0.96);
+    color: #e6edf3;
+}
+
+.app-navbar__brand,
+.app-navbar__links {
+    display: flex;
+    align-items: center;
+}
+
+.app-navbar__brand {
+    gap: 0.65rem;
+    color: #e6edf3;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.app-navbar__mark {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background: #ff2d78;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.app-navbar__links {
+    gap: 1rem;
+}
+
+.app-navbar__link {
+    padding: 0.5rem 0.65rem;
+    border-radius: 0.4rem;
+    color: #aab4c0;
+    text-decoration: none;
+}
+
+.app-navbar__link:hover,
+.app-navbar__link.is-active {
+    background: #1c2230;
+    color: #ff6b9d;
+}
+
+.app-navbar__signup {
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.45rem;
+    background: #ff2d78;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.app-navbar__username,
+.app-navbar__status {
+    color: #aab4c0;
+    font-size: 0.875rem;
+}
+
+.app-navbar .logout-control {
+    align-items: flex-end;
+}
+
+@media (max-width: 540px) {
+    .app-navbar {
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .app-navbar__links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.35rem;
+    }
+
+    .app-navbar__username {
+        display: none;
+    }
+}
+
+.highlight{
+    color: #d20d3b;
+}
